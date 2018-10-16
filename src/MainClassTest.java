@@ -1,20 +1,21 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 public class MainClassTest extends MainClass
 {
-  
-  @Test
+@Test
 
-  public void testGetClassNumber()
-  {
+  public void testGetClassString()
+{
 
-    int number = this.getClassNumber();
-    if(number > 45) {
-      System.out.println("Sucsess! Value " + number +" more than 45");
-    }else {
-      System.out.println("Error! Value: "+ number + " less than 45");
-    }
+  String testString = this.getClassString();
 
-
+  if (testString.contains("Hello")) {
+    System.out.println("Sucsess! Value 'Hello' is in: " + "'"+ testString + "'");
+  } else if (testString.contains("hello")) {
+    System.out.println("Sucsess! Value 'hello' is in: " +"'" + testString+"'");
+  } else {
+    Assert.fail("line is not the desired value: 'Hello' or 'hello'");
   }
+}
 }
