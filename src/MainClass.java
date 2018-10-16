@@ -1,6 +1,6 @@
 public class MainClass
 {
-    private String class_string = ", word HeLLO";
+    private String class_string = "Hello world";
 
     public String getClassString()
     {
